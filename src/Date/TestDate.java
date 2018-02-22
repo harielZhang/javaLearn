@@ -15,11 +15,6 @@ public class TestDate {
 
     }
 
-//    public static void genRd(){
-//        Random rd = new Random();
-//        double db = rd.nextDouble(0.31507199);
-//        System.out.println(db);
-//    }
 
     public static void main(String[] args) {
 
