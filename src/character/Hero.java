@@ -63,8 +63,14 @@ public class Hero{
 
     public static void main(String[] args) {
 
-//        Hero garren = new Hero("盖伦", 500);
+        Hero garren = new Hero("盖伦", 0);
         ADHero vn = new ADHero("薇恩", 500);
+        try {
+            vn.attack(garren);
+        }catch (EnemyHeroIsDead e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
 //        Item i = new Item();
 
 //        vn.useItem(i);

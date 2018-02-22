@@ -7,8 +7,10 @@ public class ADHero extends Hero implements AD, Mortal{
         System.out.println(name + "进行了一次攻击，但是不知道打了谁");
     }
 
-    public void attack(Hero... heroes){
+    public void attack(Hero... heroes) throws EnemyHeroIsDead{
         for (int i = 0; i < heroes.length; i++){
+            if (heroes[i].hp == 0)
+                throw new EnemyHeroIsDead(heroes[i].name + "已经挂了，不要再打了");
             System.out.println(name + "攻击了" + heroes[i].name);
         }
     }
