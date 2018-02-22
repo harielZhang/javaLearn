@@ -1,6 +1,7 @@
 package Date;
 
 import java.util.Date;
+import java.util.Random;
 
 public class TestDate {
 
@@ -14,12 +15,13 @@ public class TestDate {
 
     }
 
+//    public static void genRd(){
+//        Random rd = new Random();
+//        double db = rd.nextDouble(0.31507199);
+//        System.out.println(db);
+//    }
+
     public static void main(String[] args) {
-//        Date d1 = new Date();
-//        System.out.println("当前时间" + d1);
-//
-//        System.out.println(d1.toString());
-//        System.out.println(d1.getTime());
 
         Date d1 = new Date(0);
         System.out.println("1997年第一天" + d1);
@@ -28,10 +30,11 @@ public class TestDate {
         Date d2 = new Date(t2);
         System.out.println("1997年最后一天" + d2);
 //        System.out.println(genRdtime());
-        int rdt = (int)(genRdtime()*1e10);
+        long rdt = (long)(genRdtime()*1e10);
         System.out.println(rdt);
         Date rd3 = new Date(rdt);
         System.out.println("1997随机一天是" + rd3);
+
 
 
 
