@@ -1,8 +1,11 @@
 package character;
 
 import property.Item;
+import java.io.Serializable;
 
-public class Hero{
+public class Hero implements Serializable{
+
+    private static final long serialVersionUID = 1L;
     String name;
     float hp;
     float armor;
@@ -11,7 +14,7 @@ public class Hero{
     static String copyright;
 
     public Hero(){
-        System.out.println("爸爸方法");
+
 
     }
 
@@ -61,16 +64,20 @@ public class Hero{
         hp += blood;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
     public static void main(String[] args) {
 
-        Hero garren = new Hero("盖伦", 0);
-        ADHero vn = new ADHero("薇恩", 500);
-        try {
-            vn.attack(garren);
-        }catch (EnemyHeroIsDead e){
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
+//        Hero garren = new Hero("盖伦", 0);
+//        ADHero vn = new ADHero("薇恩", 500);
+//        try {
+//            vn.attack(garren);
+//        }catch (EnemyHeroIsDead e){
+//            System.out.println(e.getMessage());
+//            e.printStackTrace();
+//        }
 //        Item i = new Item();
 
 //        vn.useItem(i);
