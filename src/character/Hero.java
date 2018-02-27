@@ -1,9 +1,10 @@
 package character;
 
+import Collection.LOL;
 import property.Item;
 import java.io.Serializable;
 
-public class Hero implements Serializable{
+public class Hero implements Serializable, LOL{
 
     private static final long serialVersionUID = 1L;
     String name;
@@ -21,7 +22,7 @@ public class Hero implements Serializable{
     public Hero(String name, float hp){
         this.name = name;
         this.hp = hp;
-        System.out.println("你就这样调用我");
+//        System.out.println("你就这样调用我");
 
     }
 
@@ -65,6 +66,10 @@ public class Hero implements Serializable{
     }
 
     public String getName(){
+        return this.name;
+    }
+
+    public String toString(){
         return this.name;
     }
 
