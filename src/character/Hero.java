@@ -8,7 +8,7 @@ public class Hero implements Serializable, LOL{
 
     private static final long serialVersionUID = 1L;
     String name;
-    float hp;
+    int hp;
     float armor;
     int movespeed = 300;
 
@@ -16,17 +16,20 @@ public class Hero implements Serializable, LOL{
 
     public Hero(){
 
-
     }
 
-    public Hero(String name, float hp){
+    public Hero(String name){
+        this.name = name;
+    }
+
+    public Hero(String name, int hp){
         this.name = name;
         this.hp = hp;
 //        System.out.println("你就这样调用我");
 
     }
 
-    public Hero(String name, float hp, float heroArmor, int heroMovespeed){
+    public Hero(String name, int hp, float heroArmor, int heroMovespeed){
         this(name, hp);
         armor = heroArmor;
         movespeed = heroMovespeed;
@@ -57,7 +60,7 @@ public class Hero implements Serializable, LOL{
         System.out.println(name + "已经超神啦");
     }
 
-    float getHp(){
+    public int getHp(){
         return hp;
     }
 
@@ -72,6 +75,8 @@ public class Hero implements Serializable, LOL{
     public String toString(){
         return this.name;
     }
+
+
 
     public static void main(String[] args) {
 

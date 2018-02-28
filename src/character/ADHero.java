@@ -18,7 +18,7 @@ public class ADHero extends Hero implements AD, Mortal{
     public ADHero(){
     }
 
-    public ADHero(String name, float hp){
+    public ADHero(String name, int hp){
         super(name, hp);
         System.out.println("显式AD英雄被创建了");
     }
